@@ -126,8 +126,8 @@ function checkout() {
 function useMyLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
             alert(`Location captured! Latitude: ${latitude}, Longitude: ${longitude}`);
         }, function (error) {
             alert(`Error getting location: ${error.message}`);
@@ -138,15 +138,21 @@ function useMyLocation() {
 }
 
 function submitForm() {
-    const domain = document.getElementById('domainInput').value;
-    const creditCard = document.getElementById('creditCard').value;
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const address = document.getElementById('address').value;
+    var domain = document.getElementById('domainInput').value;
+    var creditCard = document.getElementById('creditCard').value;
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var address = document.getElementById('address').value;
 
     if (domain && creditCard && name && email && address) {
+        var cardInfo = window.cardValidator.number(creditCard);
+
+        if (cardInfo.isValid) {
         document.getElementById('response').innerText = "Submitted form! Website workers will see your response.";
         document.getElementById('response').classList.remove('hidden');
+        } else {
+        alert("Credit card number invalid! Please try again.");
+        }
     } else {
         alert("Please fill in all the input boxes.");
     }
