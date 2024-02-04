@@ -1,5 +1,6 @@
 <h1>PHPSpy</h1>
-[http://url/to/img.png](https://github.com/crazystuffofficial/PHPSpy/assets/125907466/2a6aef10-6075-4077-bf77-d6203e1e9148)
+
+![favicon](https://github.com/crazystuffofficial/PHPSpy/assets/125907466/f12a3c06-490b-4029-8777-5af0154875fe)
 
 
 <p>PHPSpy isn't meant to trick people, but meant as a lesson that other websites can.</p>
