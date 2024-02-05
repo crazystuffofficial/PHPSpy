@@ -145,9 +145,31 @@ function submitForm() {
     var address = document.getElementById('address').value;
 
     if (domain && creditCard && name && email && address) {
-        var cardInfo = window.cardValidator.number(creditCard);
+  // Get card number from input field
+  var cardNumber = creditCard;
 
-        if (cardInfo.isValid) {
+  // Implement Luhn algorithm for basic validation
+  var sum = 0;
+  var digit = 0;
+  var isSecond = false;
+
+  for (var i = cardNumber.length - 1; i >= 0; i--) {
+    digit = parseInt(cardNumber.charAt(i));
+    if (isSecond) {
+      digit *= 2;
+      if (digit > 9) {
+        digit -= 9;
+      }
+    }
+    sum += digit;
+    isSecond = !isSecond;
+  }
+
+  var isValid = (sum % 10 === 0);
+
+  // Display validation result
+
+        if (isValid) {
         document.getElementById('response').innerText = "Submitted form! Website workers will see your response.";
         document.getElementById('response').classList.remove('hidden');
         } else {
