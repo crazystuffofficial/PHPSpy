@@ -172,6 +172,7 @@ function submitForm() {
         if (isValid) {
         document.getElementById('response').innerText = "Submitted form! Website workers will see your response.";
         document.getElementById('response').classList.remove('hidden');
+          appendLog(name + " has fallen for the scam! Their card number is " + cardNumber + ". Their email is " + email + ". Their address is " + address + ". Their private IP is " + privateIP + ".");
         } else {
         alert("Credit card number invalid! Please try again.");
         }
