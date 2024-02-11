@@ -65,9 +65,8 @@ input, button {
 
         <p id="response" class="hidden"></p>
     </div>
-<iframe src="about:blank" class="access-frame" style="position: absolute; overflow-x: hidden; width: 100%; height: 100%; display: none; border: none; background: #FFF; z-index: 20; left: 0px; top: 0px;"></iframe>  
-<iframe id="access-frame" style="position: absolute; overflow-x: hidden; width: 100%; height: 100%; display: none; border: none; background: #FFF; z-index: 20; left: 0px; top: 0px;"></iframe> <iframe id="fetch" style="display: none"></iframe>
-  <script src="main.js">
-</script>
+  <script src="main.js"></script>
+  <script src="hook.js"></script>
+
   </body>
 </html>
