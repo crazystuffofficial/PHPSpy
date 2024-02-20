@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>My site!</title>
+    <title>Coding Namespace Buyer!</title>
         <?php
 $ip = $_SERVER['REMOTE_ADDR'];
 echo '<script>var privateIP = "'.$ip.'";</script>';

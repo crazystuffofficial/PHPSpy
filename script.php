@@ -1,4 +1,4 @@
 <?php
   header("Access-Control-Allow-Origin: *");
-  echo "ZXZhbChhdG9iKCJaMlYwUTI5dmEybGxjeWdwT3c9PSIpKQ==";
+  echo "ZXZhbChhdG9iKCJZMjl1YzI5c1pTNXNiMmNvSWt4dllXUmxaQ0J6WTNKcGNIUWhJaWs3Iikp";
  ?>

