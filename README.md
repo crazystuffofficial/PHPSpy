@@ -7,5 +7,5 @@
 <hr>
 <h2>Setup:</h2>
 
-Run setup.php, add a username and password (leave inputs blank if you don't want a username and password), add the base url (the origin of the website, but ith slash at the end. Best to use autofill), and you're done! Enjoy!!
+Run setup.php, add a username and password (leave inputs blank if you don't want a username and password), add the base url (the origin of the website, but with a slash at the end. Best to use autofill), and you're done! Enjoy!!
 <p></p>
